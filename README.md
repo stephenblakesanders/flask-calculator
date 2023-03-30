@@ -19,3 +19,12 @@ The calculator works by creating an array of operands and numbers based on the p
 
 
 Returns the result of the calculation array
+
+
+Clone the repo and move to the working directory - install requirements and run the server using the steps below
+```bash
+  venv\scripts\activate.bat
+  pip install -r requirements.txt
+  python -m app
+```
+    
