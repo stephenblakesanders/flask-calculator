@@ -1,0 +1,78 @@
+body{
+    font-family: sans-serif;
+    background-color: rgb(183, 190, 196);
+}
+
+.calculator {
+    background-color: rgb(15, 76, 129);
+    max-width: 178px;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 20vh;
+}
+
+#display {
+    width: 153px;
+    min-height: 20px;
+    padding: 10px;
+    margin: 2px;
+    text-align: right;
+    overflow: none;
+    background-color: rgb(169, 201, 230);
+    border-radius: 4px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    padding: 10px;
+    margin: 2px;
+    min-width: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgb(182, 183, 255);
+}
+
+.button:hover {
+
+}
+
+.button.double_width {
+    min-width: 63px;
+}
+
+.clear {
+    background-color: rgb(197, 71, 71);
+    color: white;
+}
+
+.op {
+    background-color: rgb(41, 41, 158);
+    color: white;
+}
+
+.equals {
+    background-color: rgb(119, 190, 190);
+    color: white;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }

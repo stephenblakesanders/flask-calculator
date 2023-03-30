@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <section class="calculator">
+        <div class="container">
+            <div id="display"></div>
+            <div class="buttons">
+                <div class="row">
+                    <div class="noselect button double_width clear">C</div>
+                    <div class="noselect button clear">CE</div>
+                    <div class="noselect button op">/</div>
+                </div>
+
+                <div class="row">
+                    <div class="noselect button">7</div>
+                    <div class="noselect button">8</div>
+                    <div class="noselect button">9</div>
+                    <div class="noselect button op">X</div>
+                </div>
+                
+                <div class="row">
+                    <div class="noselect button">4</div>
+                    <div class="noselect button">5</div>
+                    <div class="noselect button">6</div>
+                    <div class="noselect button op">-</div>
+                </div>
+
+                
+                <div class="row">
+                    <div class="noselect button">1</div>
+                    <div class="noselect button">2</div>
+                    <div class="noselect button">3</div>
+                    <div class="noselect button op">+</div>
+                </div>
+
+                
+                <div class="row">
+                    <div class="noselect button double_width">0</div>
+                    <div class="noselect button equals double_width">=</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>         
+
+{% endblock %}
