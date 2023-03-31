@@ -31,6 +31,7 @@ $(document).ready(function () {
 
             // the clicked button
             current = e.target.innerText;
+            console.log("lastOp: ", lastOp, " opLength: ", ops.length);
 
             switch(e.target.innerText) {
                 case 'C':
@@ -68,28 +69,28 @@ $(document).ready(function () {
                     break;
 
                 case '+':
-                    if (!lastOp && ops.length > 0 && !last0) {
+                    if (!lastOp && ops.length > 0 && !only0) {
                         ops.push(current);
                         display.innerText += current;
                     }
                     break;
                 
                 case '-':
-                    if (!lastOp && ops.length > 0 && !last0) {
+                    if (!lastOp && ops.length > 0 && !only0) {
                         ops.push(current);
                         display.innerText += current;
                     }
                     break;
 
                 case '/':
-                    if (!lastOp && ops.length > 0 && !last0) {
+                    if (!lastOp && ops.length > 0 && !only0) {
                         ops.push(current);
                         display.innerText += current;
                     }
                     break;
 
                 case 'X':
-                    if (!lastOp && ops.length > 0 && !last0) {
+                    if (!lastOp && ops.length > 0 && !only0) {
                         ops.push(current);
                         display.innerText += current;
                     }
