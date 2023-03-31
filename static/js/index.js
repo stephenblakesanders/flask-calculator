@@ -6,7 +6,7 @@ $(document).ready(function () {
     var opList = ["X", "/", "+", "-"];
 
     // url for posting to flask
-    const url = 'http://127.0.0.1:5000/data';
+    const url = '/data';
 
     // display element
     let display = document.getElementById('display');
