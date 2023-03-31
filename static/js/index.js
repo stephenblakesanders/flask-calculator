@@ -58,7 +58,10 @@ $(document).ready(function () {
                         dataType: "json",
                         data: data,
                         success: function(response) {
-                            ops = [response];
+                            for (let i = 0; i < response.length; i++)
+                            {
+                                ops.push(response[i]);
+                            }
                             display.innerText = response;
                         },
                         error: function(response) {

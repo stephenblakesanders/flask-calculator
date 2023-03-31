@@ -20,7 +20,7 @@ def calc(arr):
 
     # loop through the array
     while index < len(arr) - 1:
-
+        print(arr)
         # adds the first number to the result
         if arr[index] not in opList:
             while index < len(arr) and arr[index] in nums:
