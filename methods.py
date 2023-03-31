@@ -15,54 +15,87 @@ def calc(arr):
     # this will allow multiple digit operations
     current = ""
 
+    # checks if the last value was an operator
+    lastOp = False
+
     # loop through the array
     while index < len(arr) - 1:
 
         # adds the first number to the result
         if arr[index] not in opList:
-            result += int(arr[index])
-            index += 1
+            while index < len(arr) and arr[index] in nums:
+                if not lastOp:
+                    current += arr[index]
+                else:
+                    current = arr[index]
+                    lastOp = False
 
+                index += 1
+
+            result += int(current)
+        
         # handles multiplication
         elif arr[index] == "X":
+            lastOp = True
             index += 1
 
             # adds every numerical digit before multiplying
             while index < len(arr) and arr[index] in nums:
-                current += arr[index]
+                if not lastOp:
+                    current += arr[index]
+                else:
+                    current = arr[index]
+                    lastOp = False
+
                 index += 1
 
             result *= int(current)
 
         # handles division
         elif arr[index] == "/":
+            lastOp = True
             index += 1
 
             # adds every numerical digit before dividing
             while index < len(arr) and arr[index] in nums:
-                current += arr[index]
+                if not lastOp:
+                    current += arr[index]
+                else:
+                    current = arr[index]
+                    lastOp = False
+
                 index += 1
 
             result /= int(current)
 
         # handles addition
         elif arr[index] == "+":
+            lastOp = True
             index += 1
 
             # adds every numerical digit before adding
             while index < len(arr) and arr[index] in nums:
-                current += arr[index]
+                if not lastOp:
+                    current += arr[index]
+                else:
+                    current = arr[index]
+                    lastOp = False
                 index += 1
 
             result += int(current)
 
         # handles subtraction
         elif arr[index] == "-":
+            lastOp = True
             index += 1
 
             # adds every numerical digit before subtracting
             while index < len(arr) and arr[index] in nums:
-                current += arr[index]
+                if not lastOp:
+                    current += arr[index]
+                else: 
+                    current = arr[index]
+                    lastOp = False
                 index += 1
 
             result -= int(current)
